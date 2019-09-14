@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>U Shop</title>
+<meta content="" name="description">
+<meta content="shihab" name="author">
+<link rel="icon" type="image/png" href="images/favicon.jpg">
+<link rel="apple-touch-icon" href="images/favicon.jpg">
+<link href="css/font-awesome.css" rel="stylesheet" type="text/css">
+<link href='https://fonts.googleapis.com/css?family=Poppins:300,500,600,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link href="css/owl.carousel.css" rel="stylesheet" type="text/css">
+<link href="Bootstrap/css/bootstrap.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/customstyle.css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body id="index">
+<div class="wrapar"> 
+      <!-- Header Start-->
+      <div class="header">
+        <div class="header-top">
+          <div class="container">
+            <div class="call pull-left">
+              <p>Call us: <span><a href="tel:00962788616108">00962788616108</a></span></p>
+            </div>
+            <div class="user-info pull-right">
+              <div class="user">
+                <ul>
+                  <li><a href="#" data-toggle="modal" data-target="#login">Login</a> 
+                    <!-- Modal -->
+                    <div class="modal fade" id="login" role="dialog">
+                      <div class="modal-dialog"> 
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <div class="panel-heading">
+                              <div class="panel-title pull-left">Login</div>
+                              <div class="pull-right"><a href="#">Forgot password?</a>
+                                <button aria-hidden="true" data-dismiss="modal" class="close btn btn-xs " type="button"> <i class="fa fa-times"></i> </button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="modal-body">
+                            <form id="loginform" class="form-horizontal">
+                              <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                <input id="login-username" type="text" class="form-control" name="username" value="" placeholder="username or email">
+                              </div>
+                              <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                <input id="login-password" type="password" class="form-control" name="password" placeholder="password">
+                              </div>
+                              <div class="input-group">
+                                <div class="checkbox">
+                                  <label>
+                                    <input id="login-remember" type="checkbox" name="remember" value="1">
+                                    Remember me</label>
+                                </div>
+                              </div>
+                              <div class="form-group"> 
+                                <!-- Button -->
+                                <div class="col-sm-12 controls"><a id="btn-login" href="#" class="btn btn-primary btn-success">Login</a></div>
+                              </div>
+                            </form>
+                          </div>
+                          <div class="modal-footer">
+                            <div class="form-group">
+                              <div class="col-md-12 control">
+                                <div>Don't have an account! <a href="#">Sign Up Here</a></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li><a href="#" data-toggle="modal" data-target="#register">Register</a>
+                    <div class="modal fade" id="register" role="dialog">
+                      <div class="modal-dialog"> 
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <div class="panel-heading">
+                              <div class="panel-title pull-left">Register</div>
+                              <div class="pull-right">
+                                <button aria-hidden="true" data-dismiss="modal" class="close" type="button"><i class="fa fa-times"></i> </button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="modal-body">
+                            <div class="control-group"> 
+                              <!-- Username -->
+                              <label class="control-label"  for="username">Username</label>
+                              <div class="controls">
+                                <input type="text" id="username" name="username" placeholder="" class="input-xlarge">
+                                <p class="help-block">Username can contain any letters or numbers, without spaces</p>
+                              </div>
+                            </div>
+                            <div class="control-group"> 
+                              <!-- E-mail -->
+                              <label class="control-label" for="email">E-mail</label>
+                              <div class="controls">
+                                <input type="text" id="email" name="email" placeholder="" class="input-xlarge">
+                                <p class="help-block">Please provide your E-mail</p>
+                              </div>
+                            </div>
+                            <div class="control-group"> 
+                              <!-- Password-->
+                              <label class="control-label" for="password">Password</label>
+                              <div class="controls">
+                                <input type="password" id="password" name="password" placeholder="" class="input-xlarge">
+                                <p class="help-block">Password should be at least 4 characters</p>
+                              </div>
+                            </div>
+                            <div class="control-group"> 
+                              <!-- Password -->
+                              <label class="control-label"  for="password_confirm">Password (Confirm)</label>
+                              <div class="controls">
+                                <input type="password" id="password_confirm" name="password_confirm" placeholder="" class="input-xlarge">
+                                <p class="help-block">Please confirm password</p>
+                              </div>
+                            </div>
+                            <div class="control-group"> 
+                              <!-- Button -->
+                              <div class="controls">
+                                <button class="btn btn-success">Register</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header-mid">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-2 header-left">
+                <div class="logo"> <a href="index.html"><img src="images/logo2.jpg" alt="#" class=""></a> </div>
+              </div>
+              <div class="col-md-6 search_block mt-35">
+                <div class="search pt-5">
+                  <form action="grid-view.html">
+                    <div class="search_cat">
+                      <select class="search-category" name="search-category">
+                        <option class="computer" selected>All Categories</option>
+                        <option class="computer">Men</option>
+                        <option class="computer">Women</option>
+                        <option class="computer">Accessories</option>
+                        <option class="computer">Electronics</option>
+                        <option class="computer">Personal Care</option>
+                      </select>
+                    </div>
+                    <input type="text" placeholder="Search...">
+                    <button type="submit" class="btn submit"> <span class="fa fa-search"></span></button>
+                  </form>
+                </div>
+              </div>
+              <div class="col-md-3 header-right mt-35">
+                <div class="cart">
+                  <div class="cart-icon dropdown"></div>
+                  <a aria-expanded="false" aria-haspopup="true" role="button" data-toggle="dropdown" class="dropdown-toggle" href="cart.html">My Cart( 2 )<span> $40.60</span></a>
+                  <ul class="dropdown-menu pull-right cart-dropdown-menu shihabcolor">
+                    <li>
+                      <table class="table table-striped">
+                        <tbody>
+                          <tr>
+                            <td class="text-center"><a href="product.html"><img class="img-thumbnail" src="images/product/black-skirt.jpg" alt="img"></a></td>
+                            <td class="text-left"><a href="#">Black Skirt</a></td>
+                            <td class="text-right quality">X1</td>
+                            <td class="text-right price-new">$25.00</td>
+                            <td class="text-center"><button type="button" title="Remove" class="btn btn-xs remove"><i class="fa fa-times"></i></button></td>
+                          </tr>
+                          <tr>
+                            <td class="text-center"><a href="product.html"><img class="img-thumbnail" src="images/product/yellow-t-shirt.jpg" alt="img"></a></td>
+                            <td class="text-left"><a href="#">Yellow T-shirt</a></td>
+                            <td class="text-right quality">X1</td>
+                            <td class="text-right price-new">$10.00</td>
+                            <td class="text-center"><button type="button" title="Remove" class="btn btn-xs remove"><i class="fa fa-times"></i></button></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </li>
+                    <li>
+                      <div class="minitotal">
+                        <table class="table pricetotal">
+                          <tbody>
+                            <tr>
+                              <td class="text-right"><strong>Sub-Total</strong></td>
+                              <td class="text-right price-new">$35.00</td>
+                            </tr>
+                            <tr>
+                              <td class="text-right"><strong>Tax (16%)</strong></td>
+                              <td class="text-right price-new">$5.6</td>
+                            </tr>
+                            <tr>
+                              <td class="text-right"><strong>Total</strong></td>
+                              <td class="text-right price-new">$40.60</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <div class="controls"> <a class="btn btn-primary pull-left" href="cart.html" id="view-cart"><i class="fa fa-shopping-cart"></i> View Cart </a> <a class="btn btn-primary pull-right" href="checkout-step1.html" id="checkout"><i class="fa fa-share"></i> Checkout</a> </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Header End -->   
+      <!-- Main menu Start -->
+      <div id="main-menu">
+        <div class="container">
+          <nav class="navbar navbar-default">
+            <div class="navbar-header">
+              <button aria-controls= "navbar" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+              <a href="index.html" class="navbar-brand shihabcolor">U Shop</a> </div>
+            <div class="navbar-collapse collapse text-left" id="navbar">
+              <ul class="nav navbar-nav">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="grid-view.html">WOMEN</a></li>
+                <li><a href="grid-view.html">MEN</a><span class="new">new</span></li>            
+                <li><a href="contact-us.html">CONTACT US</a></li>
+                <li><a href="about-us.html">ABOUT US</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <!-- Main menu End --> 
+      <!-- Main Banner Start-->
+      <div id="banner">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div id="main-slider" class="owl-carousel">
+                <div class="item"><img src="images/main-banner11.jpg" alt="main-banner1"></div>
+                <div class="item"><img src="images/main-banner22.jpg" alt="main-banner2"></div>
+                <div class="item"><img src="images/main.jpeg" alt="main-banner3"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Main Banner End --> 
+      <!-- 3 CMS Block Start -->
+      <div id="czservicecmsblock">
+            <div class="service_container container">
+              <div class="service-wrapper">
+                <div class="service-area">
+                  <div class="service-third service1">
+                    <div class="service-icon icon1"></div>
+                    <div class="service-content">
+                    <div class="service-heading">24x7 Free Support</div>
+                    </div>
+                  </div>
+                  <div class="service-third service2">
+                    <div class="service-icon icon2"></div>
+                    <div class="service-content">
+                    <div class="service-heading">Money Back Gurantee</div>
+                    </div>
+                  </div>
+                  <div class="service-third service3">
+                    <div class="service-icon icon3"></div>
+                    <div class="service-content">
+                    <div class="service-heading">Free Worldwide Shipping</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      <!-- 3 CMS Block End --> 
+      <div class="container mt-35">
+        <div class="row">
+          <div class="col-md-4"></div>
+          <div class="col-md-4 text-center"><h2 class="best display-4">Best Selling!</h2></div>
+          <div class="col-md-4"></div>
+        </div>
+      </div>
+
+      <div class="container mt-35">
+          <div class="row">
+              <div class="col-md-3 col-sm-6">
+                  <div class="product-grid">
+                      <div class="product-image">
+                          <a href="product-detail-view.html">
+                              <img class="pic-1" src="images/product/jack1.jpg">
+                              <img class="pic-2" src="images/product/jack13.jpg">
+                          </a>
+                          <ul class="social">
+                              <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                              <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                              <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                          </ul>
+                          <span class="product-new-label">Sale</span>
+                          <span class="product-discount-label">20%</span>
+                      </div>
+                      <div class="product-content">
+                          <h3 class="title"><a href="product-detail-view.html">FUZZY WUZZY SWEATER TANK TOP</a></h3>
+                          <div class="price">$16.00
+                              <span>$20.00</span>
+                          </div>
+                          <a class="add-to-cart" href="cart.html">+ Add To Cart</a>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                  <div class="product-grid">
+                      <div class="product-image">
+                          <a href="product-detail-view.html">
+                              <img class="pic-1" src="images/product/dress3.jpg">
+                              <img class="pic-2" src="images/product/dress32.jpg">
+                          </a>
+                          <ul class="social">
+                              <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                              <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                              <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                          </ul>
+                          <span class="product-new-label">Sale</span>
+                          <span class="product-discount-label">50%</span>
+                      </div>
+                      <!-- <ul class="rating">
+                          <li class="fa fa-star"></li>
+                          <li class="fa fa-star"></li>
+                          <li class="fa fa-star"></li>
+                          <li class="fa fa-star"></li>
+                          <li class="fa fa-star"></li>
+                      </ul> -->
+                      <div class="product-content">
+                          <h3 class="title"><a href="product-detail-view.html">MADDIE HUNTER GREEN BODYCON</a></h3>
+                          <div class="price">$5.00
+                              <span>$10.00</span>
+                          </div>
+                          <a class="add-to-cart" href="cart.html">+ Add To Cart</a>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                  <div class="product-grid">
+                      <div class="product-image">
+                          <a href="product-detail-view.html">
+                              <img class="pic-1" src="images/product/dress5.jpg">
+                              <img class="pic-2" src="images/product/dress5a.jpg">
+                          </a>
+                          <ul class="social">
+                              <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                              <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                              <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                          </ul>
+                          <span class="product-new-label">Sale</span>
+                          <span class="product-discount-label">50%</span>
+                      </div>
+                      <!-- <ul class="rating">
+                          <li class="fa fa-star"></li>
+                          <li class="fa fa-star"></li>
+                          <li class="fa fa-star"></li>
+                          <li class="fa fa-star"></li>
+                          <li class="fa fa-star"></li>
+                      </ul> -->
+                      <div class="product-content">
+                          <h3 class="title"><a href="product-detail-view.html">LISA LIGHT PINK SNAKE PRINT</a></h3>
+                          <div class="price">$5.00
+                              <span>$10.00</span>
+                          </div>
+                          <a class="add-to-cart" href="cart.html">+ Add To Cart</a>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                  <div class="product-grid">
+                      <div class="product-image">
+                          <a href="product-detail-view.html">
+                              <img class="pic-1" src="images/product/dress6.jpg">
+                              <img class="pic-2" src="images/product/dress6a.jpg">
+                          </a>
+                          <ul class="social">
+                              <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                              <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                              <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                          </ul>
+                          <span class="product-new-label">Sale</span>
+                          <span class="product-discount-label">50%</span>
+                      </div>
+                      <!-- <ul class="rating">
+                          <li class="fa fa-star"></li>
+                          <li class="fa fa-star"></li>
+                          <li class="fa fa-star"></li>
+                          <li class="fa fa-star"></li>
+                          <li class="fa fa-star"></li>
+                      </ul> -->
+                      <div class="product-content">
+                          <h3 class="title"><a href="product-detail-view.html">MARIANNE MOCHA SQUARE NECK</a></h3>
+                          <div class="price">$5.00
+                              <span>$10.00</span>
+                          </div>
+                          <a class="add-to-cart" href="cart.html">+ Add To Cart</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    <!-- <div class="container mt-35">
+      <div class="row">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+            <div class="col-md-3 col-sm-6">
+                  <div class="product-grid">
+                      <div class="product-image">
+                          <a href="#">
+                              <img class="pic-1" src="images/product/jack1.jpg">
+                              <img class="pic-2" src="images/product/jack13.jpg">
+                          </a>
+                          <ul class="social">
+                              <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                              <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                              <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                          </ul>
+                          <span class="product-new-label">Sale</span>
+                          <span class="product-discount-label">20%</span>
+                      </div>
+                      <ul class="rating">
+                          <li class="fa fa-star"></li>
+                          <li class="fa fa-star"></li>
+                          <li class="fa fa-star"></li>
+                          <li class="fa fa-star"></li>
+                          <li class="fa fa-star disable"></li>
+                      </ul>
+                      <div class="product-content">
+                          <h3 class="title"><a href="#">Women's Blouse</a></h3>
+                          <div class="price">$16.00
+                              <span>$20.00</span>
+                          </div>
+                          <a class="add-to-cart" href="">+ Add To Cart</a>
+                      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+            <div class="col-md-3 col-sm-6">
+                  <div class="product-grid">
+                      <div class="product-image">
+                          <a href="#">
+                              <img class="pic-1" src="images/product/dress3.jpg">
+                              <img class="pic-2" src="images/product/dress32.jpg">
+                          </a>
+                          <ul class="social">
+                              <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                              <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                              <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                          </ul>
+                          <span class="product-new-label">Sale</span>
+                          <span class="product-discount-label">50%</span>
+                      </div>
+                      <ul class="rating">
+                          <li class="fa fa-star"></li>
+                          <li class="fa fa-star"></li>
+                          <li class="fa fa-star"></li>
+                          <li class="fa fa-star"></li>
+                          <li class="fa fa-star"></li>
+                      </ul>
+                      <div class="product-content">
+                          <h3 class="title"><a href="#">Men's Plain Tshirt</a></h3>
+                          <div class="price">$5.00
+                              <span>$10.00</span>
+                          </div>
+                          <a class="add-to-cart" href="">+ Add To Cart</a>
+                      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+             <div class="col-md-3 col-sm-6">
+                  <div class="product-grid">
+                      <div class="product-image">
+                          <a href="#">
+                              <img class="pic-1" src="images/product/dress5.jpg">
+                              <img class="pic-2" src="images/product/dress5a.jpg">
+                          </a>
+                          <ul class="social">
+                              <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                              <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                              <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                          </ul>
+                          <span class="product-new-label">Sale</span>
+                          <span class="product-discount-label">50%</span>
+                      </div>
+                      <ul class="rating">
+                          <li class="fa fa-star"></li>
+                          <li class="fa fa-star"></li>
+                          <li class="fa fa-star"></li>
+                          <li class="fa fa-star"></li>
+                          <li class="fa fa-star"></li>
+                      </ul>
+                      <div class="product-content">
+                          <h3 class="title"><a href="#">Men's Plain Tshirt</a></h3>
+                          <div class="price">$5.00
+                              <span>$10.00</span>
+                          </div>
+                          <a class="add-to-cart" href="">+ Add To Cart</a>
+                      </div>
+                  </div>
+              </div>
+            </div>
+             <div class="carousel-item">
+             <div class="col-md-3 col-sm-6">
+                  <div class="product-grid">
+                      <div class="product-image">
+                          <a href="#">
+                              <img class="pic-1" src="images/product/dress6.jpg">
+                              <img class="pic-2" src="images/product/dress6a.jpg">
+                          </a>
+                          <ul class="social">
+                              <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                              <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                              <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                          </ul>
+                          <span class="product-new-label">Sale</span>
+                          <span class="product-discount-label">50%</span>
+                      </div>
+                      <ul class="rating">
+                          <li class="fa fa-star"></li>
+                          <li class="fa fa-star"></li>
+                          <li class="fa fa-star"></li>
+                          <li class="fa fa-star"></li>
+                          <li class="fa fa-star"></li>
+                      </ul>
+                      <div class="product-content">
+                          <h3 class="title"><a href="#">Men's Plain Tshirt</a></h3>
+                          <div class="price">$5.00
+                              <span>$10.00</span>
+                          </div>
+                          <a class="add-to-cart" href="">+ Add To Cart</a>
+                      </div>
+                  </div>
+              </div>
+             </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+        </a>
+    </div> -->
+  <!-- Footer block Start  -->
+      <footer id="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class= "newslatter">
+                <form>
+                  <h2 class="tf">Be The First To Hear Our Exciting News</h2>
+                  <div class="input-group">
+                    <input class=" form-control" type="text" placeholder="Email Here...">
+                    <button type="submit" value="Sign up" class="btn btn-large btn-primary">Sign up</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3">
+              <div class="about">
+                <div class="footer-logo"><a href="index.html"><img src="images/logo2.jpg" alt="#" class=""></a></div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="information">
+                <h4>Customer Service</h4>
+                <ul class="toggle-footer">
+                  <li><a href="#">Returns</a></li>
+                  <li><a href="#">Delivery Options</a></li>
+                  <li><a href="#">Brand Directory</a></li>
+                  <li><a href="#">Buying Guides</a></li>
+                  <li><a href="#">My Account</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="contact">
+                <h4>Contact Us</h4>
+                <ul class="toggle-footer">
+                  <li> <i class="fa fa-map-marker"></i>
+                    <div class="address-info">Warehouse & Offices macca street,Amman, Jordan</div>
+                  </li>
+                  <li> <i class="fa fa-mobile"></i>
+                    <div class="call-info">+962788616108<br>
+                    </div>
+                  </li>
+                  <li> <i class="fa fa-envelope"> </i>
+                    <div class="email-info"><a href="#"> support@ushop.com</a></div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="social-link">
+                  <ul>
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="footer-link">
+                  <ul>
+                    <li><a href="#">Specials</a></li>
+                    <li><a href="#">Affiliates</a></li>
+                    <li><a href="#">Gift Vouchers</a></li>
+                    <li><a href="#">Brands</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Site Map</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="copy-right">
+                  <p> All Rights Reserved. Copyright 2019 Powered by <a href="index.html">U shop</a>.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-offer">
+            <h2>Deals of the Day: Unbox Latest Offers & Deals Every Single Day at Store.</h2>
+          </div>
+        </div>
+      </footer>
+  <!-- Footer block End  --> 
+</div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script src="js/jQuery.js"></script> 
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script src="Bootstrap/js/bootstrap.js"></script> 
+<script src="js/owl.carousel.min.js"></script> 
+<script src="js/globle.js"></script>
+</body>
+</html>
