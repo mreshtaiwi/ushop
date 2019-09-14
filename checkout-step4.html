@@ -494,6 +494,19 @@
 
 <!-- Include all compiled plugins (below), or include individual files as needed --> 
 <script src="Bootstrap/js/bootstrap.js"></script> 
-<script src="js/globle.js"></script>
+<!--<script src="js/globle.js"></script>-->
+  <script type="text/javascript">
+  $(document).ready(function(){
+  $(".deletes1").on('click',function(){
+      $("#firstitems").hide();
+  });
+  $(".deletes2").on('click',function(){
+      $("#seconditems").hide();
+  });
+  $(".deletes3").on('click',function(){
+      $("#thirditems").hide();
+  });
+});
+</script>
 </body>
 </html>
