@@ -1,3 +1,56 @@
+$(document).ready(function() {
+      $("#all").click(function(){
+        $(".dres1").show();
+        $(".blaz1").show();
+        $(".wed1").show();
+        $(".acc1").show();
+        // $(".elc1").show();
+        // $(".per1").show();
+      });
+
+     $("#dresses").click(function(){
+        $(".dres1").show();
+        $(".blaz1").hide();
+        $(".wed1").hide();
+        $(".acc1").hide();
+        // $(".elc1").hide();
+        // $(".per1").hide();
+      });
+
+     $("#blazers").click(function(){
+        $(".dres1").hide();
+        $(".blaz1").show();
+        $(".wed1").hide();
+        $(".acc1").hide();
+        // $(".elc1").hide();
+        // $(".per1").hide();
+      });
+     $("#wedding").click(function(){
+        $(".dres1").hide();
+        $(".blaz1").hide();
+        $(".wed1").show();
+        $(".acc1").hide();
+        // $(".elc1").hide();
+        // $(".per1").hide();
+      });
+     $("#accessories").click(function(){
+        $(".dres1").hide();
+        $(".blaz1").hide();
+        $(".wed1").hide();
+        $(".acc1").show();
+        // $(".elc1").hide();
+        // $(".per1").hide();
+      });
+      $("#personal").click(function(){
+        $(".dres1").hide();
+        $(".blaz1").hide();
+        $(".wed1").hide();
+        $(".acc1").hide();
+        // $(".elc1").hide();
+        // $(".per1").show();
+      });
+
+    });
 $(document).ready(function(){
   $(".delete1").on('click',function(){
       $("#firstitem").hide();
@@ -7,7 +60,67 @@ $(document).ready(function(){
   });
   $(".delete3").on('click',function(){
       $("#thirditem").hide();
+
+      var regex = /[+-]?\d+(\.\d+)?/g;
+
+    var in1 =  parseFloat($("#qu1").val());
+    var pri1 =  parseFloat($("#pr1").html().match(regex));
+    var result1 = parseFloat((in1 * pri1).toFixed(2));
+    $("#res1").html(result1);
+
+    var in2 =  parseFloat($("#qu2").val());
+    var pri2 =  parseFloat($("#pr2").html().match(regex));
+    var result2 = parseFloat((in2 * pri2).toFixed(2));
+    $("#res2").html(result2);
+
+    var in3 =  parseFloat($("#qu3").val());
+    var pri3 =  parseFloat($("#pr3").html().match(regex));
+    var result3 = parseFloat((in3 * pri3).toFixed(2));
+    $("#res3").html(result3);
+
+    var total = result1 + result2 + result3;
+    $("#withouttax").html(total);
+    var taxes = parseFloat((total * 0.16).toFixed(2));
+    $("#taxes").html(taxes);
+    var totalwithtax = parseFloat((total + taxes).toFixed(2));
+    $("#total-tax").html(totalwithtax);
   });
+
+
+  $("#update").click(function(){
+    
+    var regex = /[+-]?\d+(\.\d+)?/g;
+
+    var in1 =  parseFloat($("#qu1").val());
+    var pri1 =  parseFloat($("#pr1").html().match(regex));
+    var result1 = parseFloat((in1 * pri1).toFixed(2));
+    $("#res1").html(result1);
+
+    var in2 =  parseFloat($("#qu2").val());
+    var pri2 =  parseFloat($("#pr2").html().match(regex));
+    var result2 = parseFloat((in2 * pri2).toFixed(2));
+    $("#res2").html(result2);
+
+    var in3 =  parseFloat($("#qu3").val());
+    var pri3 =  parseFloat($("#pr3").html().match(regex));
+    var result3 = parseFloat((in3 * pri3).toFixed(2));
+    $("#res3").html(result3);
+
+    var total = result1 + result2 + result3;
+    $("#withouttax").html(total);
+    var taxes = parseFloat((total * 0.16).toFixed(2));
+    $("#taxes").html(taxes);
+    var totalwithtax = parseFloat((total + taxes).toFixed(2));
+    $("#total-tax").html(totalwithtax);
+    // var in2 = $("#qu2").val();
+    // var pri2 = $("#pr2").html();
+    // var in3 = $("#qu3").val();
+    // var pri3 = $("#pr3").html();
+  });
+
+
+
+
 
   // $(".qty").focusout(function(){
   //   var price = parceFlout($(".price").val());
@@ -175,59 +288,7 @@ $(document).ready(function() {
     });
 
 /* feature product */
-$(document).ready(function() {
-      $("#all").click(function(){
-        $(".dres1").show();
-        $(".blaz1").show();
-        $(".wed1").show();
-        $(".acc1").show();
-        // $(".elc1").show();
-        // $(".per1").show();
-      });
 
-     $("#dresses").click(function(){
-        $(".dres1").show();
-        $(".blaz1").hide();
-        $(".wed1").hide();
-        $(".acc1").hide();
-        // $(".elc1").hide();
-        // $(".per1").hide();
-      });
-
-     $("#blazers").click(function(){
-        $(".dres1").hide();
-        $(".blaz1").show();
-        $(".wed1").hide();
-        $(".acc1").hide();
-        // $(".elc1").hide();
-        // $(".per1").hide();
-      });
-     $("#wedding").click(function(){
-        $(".dres1").hide();
-        $(".blaz1").hide();
-        $(".wed1").show();
-        $(".acc1").hide();
-        // $(".elc1").hide();
-        // $(".per1").hide();
-      });
-     $("#accessories").click(function(){
-        $(".dres1").hide();
-        $(".blaz1").hide();
-        $(".wed1").hide();
-        $(".acc1").show();
-        // $(".elc1").hide();
-        // $(".per1").hide();
-      });
-      $("#personal").click(function(){
-        $(".dres1").hide();
-        $(".blaz1").hide();
-        $(".wed1").hide();
-        $(".acc1").hide();
-        // $(".elc1").hide();
-        // $(".per1").show();
-      });
-
-    });
 
 /* Latest News */
     $(document).ready(function() {

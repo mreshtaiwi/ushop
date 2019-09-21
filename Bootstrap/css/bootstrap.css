@@ -3511,7 +3511,17 @@ input[type="submit"].btn-block,
 input[type="reset"].btn-block,
 input[type="button"].btn-block {
   width: 100%;
+  background-color: #5B183E;
+  color: white;
 }
+input[type="submit"].btn-block:hover,
+input[type="reset"].btn-block:hover,
+input[type="button"].btn-block:hover {
+  background-color: white;
+  border:2px solid #5B183E;
+  color: #5B183E;
+}
+
 .fade {
   opacity: 0;
   -webkit-transition: opacity .15s linear;
@@ -4556,7 +4566,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   color: #5B183E;
   font-size:15px;
   font-weight:700;
-  margin-left: 50px;
+  margin-left: 35px;
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {

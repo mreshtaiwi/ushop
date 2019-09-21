@@ -36,7 +36,7 @@
                           <div class="modal-header">
                             <div class="panel-heading">
                               <div class="panel-title pull-left">Login</div>
-                              <div class="pull-right"><a href="#">Forgot password?</a>
+                              <div class="pull-right"><a href="#" data-toggle="modal" data-target="#forget" data-dismiss="modal">Forgot password?</a>
                                 <button aria-hidden="true" data-dismiss="modal" class="close btn btn-xs " type="button"> <i class="fa fa-times"></i> </button>
                               </div>
                             </div>
@@ -65,12 +65,54 @@
                           <div class="modal-footer">
                             <div class="form-group">
                               <div class="col-md-12 control">
-                                <div>Don't have an account! <a href="#">Sign Up Here</a></div>
+                                <div>Don't have an account! <a href="#" data-toggle="modal" data-target="#register" data-dismiss="modal">Sign Up Here</a></div>
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="modal fade" id="forget" role="dialog">
+                              <div class="modal-dialog"> 
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <div class="panel-heading">
+                                      <div class="panel-title pull-left">Forget Password</div>
+                                      <div class="pull-right">
+                                        <button aria-hidden="true" data-dismiss="modal" class="close" type="button"><i class="fa fa-times"></i> </button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="modal-body">
+                                      <div class="panel panel-default">
+                                        <div class="panel-body">
+                                          <div class="text-center">
+                                            <h3><i class="fa fa-lock fa-4x"></i></h3>
+                                            <h2 class="text-center">Forgot Password?</h2>
+                                            <p>You can reset your password here.</p>
+                                            <div class="panel-body">
+                                              <form id="register-form" role="form" autocomplete="off" class="form" method="post">
+                                                <div class="form-group">
+                                                  <div class="input-group">
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
+                                                    <input id="email" name="email" placeholder="email address" class="form-control"  type="email">
+                                                  </div>
+                                                </div>
+                                                <div class="form-group">
+                                                  <input name="recover-submit" class="btn btn-lg btn-primary btn-block shihabcolor" value="Reset Password" type="submit">
+                                                </div>
+                                                <input type="hidden" class="hide" name="token" id="token" value=""> 
+                                              </form>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                  </div>
+                                </div>
+                              </div>
                     </div>
                   </li>
                   <li><a href="#" data-toggle="modal" data-target="#register">Register</a>
@@ -139,7 +181,7 @@
           <div class="container">
             <div class="row">
               <div class="col-md-2 header-left">
-                <div class="logo"> <a href="index.html"><img src="images/logo2.jpg" alt="#" class=""></a> </div>
+                <div class="logo"> <a href="index.html"><img src="images/logo2.jpg" alt="U fashion" class=""></a> </div>
               </div>
               <div class="col-md-6 search_block mt-35">
                 <div class="search pt-5">
@@ -216,7 +258,9 @@
       <!-- Main menu Start -->
       <div id="main-menu">
         <div class="container">
-          <nav class="navbar navbar-default">
+        	<div class="row">
+        		<div class="col-sm-12">
+        			<nav class="navbar navbar-default">
             <div class="navbar-header">
               <button aria-controls= "navbar" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
               <a href="index.html" class="navbar-brand shihabcolor">U Shop</a> </div>
@@ -225,11 +269,13 @@
                 <li><a href="index.html">HOME</a></li>
                 <li><a href="grid-view.html">WOMEN</a></li>
                 <li><a href="grid-view.html">MEN</a><span class="new">new</span></li>            
-                <li><a href="contact-us.html">CONTACT US</a></li>
-                <li><a href="about-us.html">ABOUT US</a></li>
+                <li><a href="contact.html">CONTACT US</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
               </ul>
             </div>
           </nav>
+        		</div>
+        	</div>
         </div>
       </div>
       <!-- Main menu End --> 
@@ -294,7 +340,7 @@
                               <img class="pic-2" src="images/product/jack13.jpg">
                           </a>
                           <ul class="social">
-                              <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                              <li><a href="" data-tip="Quick View"><i class="fa fa-search quickview"></i></a></li>
                               <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
                               <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
                           </ul>
@@ -628,7 +674,7 @@
                     <li><a href="#">Brands</a></li>
                     <li><a href="#">Returns</a></li>
                     <li><a href="#">Site Map</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
                   </ul>
                 </div>
               </div>

@@ -1,7 +1,26 @@
 .ordernum{
 	color: #5B183E;
 	font-size: 30px;
-
+}
+/*this line solve the adding padding to the right side of the body after close the modal dialog*/
+/*body { padding-right: 0 !important }*/
+.texter{
+	line-height: 80px;
+	padding: 10px;
+}
+.fixsize{
+	height: 510px;padding-top: 0px;margin-top: 0px;padding-bottom: 0px;margin-bottom: 25px;display: block;
+}
+.hover:hover{
+	background-color: white;
+	color: #5B183E;
+	border:1px solid #5B183E;
+}
+.ml-50{
+	margin-left: 150px;
+}
+.mt-2{
+	margin-top: 15px;
 }
 .left{
 	float: left;
@@ -25,8 +44,8 @@
 }
 body, html {
 	height: 100%;
-	margin: 0;
-	padding: 0;
+	margin: 0!important;/*i add the !important to make sure not adding any padding because of the dialog modal problem*/
+	padding: 0!important;
 }
 body {
 	color: #5B183E;
@@ -91,7 +110,7 @@ p {
 	padding: 0;
 }
 h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-	color: #000;
+	color: #5B183E;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 500;
 	margin-top: 0px;

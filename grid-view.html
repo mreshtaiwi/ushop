@@ -36,7 +36,7 @@
                           <div class="modal-header">
                             <div class="panel-heading">
                               <div class="panel-title pull-left">Login</div>
-                              <div class="pull-right"><a href="#">Forgot password?</a>
+                              <div class="pull-right"><a href="#" data-toggle="modal" data-target="#forget" data-dismiss="modal">Forgot password?</a>
                                 <button aria-hidden="true" data-dismiss="modal" class="close btn btn-xs " type="button"> <i class="fa fa-times"></i> </button>
                               </div>
                             </div>
@@ -65,12 +65,54 @@
                           <div class="modal-footer">
                             <div class="form-group">
                               <div class="col-md-12 control">
-                                <div>Don't have an account! <a href="#">Sign Up Here</a></div>
+                                <div>Don't have an account! <a href="#" data-toggle="modal" data-target="#register" data-dismiss="modal">Sign Up Here</a></div>
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="modal fade" id="forget" role="dialog">
+                              <div class="modal-dialog"> 
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <div class="panel-heading">
+                                      <div class="panel-title pull-left">Forget Password</div>
+                                      <div class="pull-right">
+                                        <button aria-hidden="true" data-dismiss="modal" class="close" type="button"><i class="fa fa-times"></i> </button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="modal-body">
+                                      <div class="panel panel-default">
+                                        <div class="panel-body">
+                                          <div class="text-center">
+                                            <h3><i class="fa fa-lock fa-4x"></i></h3>
+                                            <h2 class="text-center">Forgot Password?</h2>
+                                            <p>You can reset your password here.</p>
+                                            <div class="panel-body">
+                                              <form id="register-form" role="form" autocomplete="off" class="form" method="post">
+                                                <div class="form-group">
+                                                  <div class="input-group">
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
+                                                    <input id="email" name="email" placeholder="email address" class="form-control"  type="email">
+                                                  </div>
+                                                </div>
+                                                <div class="form-group">
+                                                  <input name="recover-submit" class="btn btn-lg btn-primary btn-block shihabcolor" value="Reset Password" type="submit">
+                                                </div>
+                                                <input type="hidden" class="hide" name="token" id="token" value=""> 
+                                              </form>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                  </div>
+                                </div>
+                              </div>
                     </div>
                   </li>
                   <li><a href="#" data-toggle="modal" data-target="#register">Register</a>
@@ -139,7 +181,7 @@
           <div class="container">
             <div class="row">
               <div class="col-md-2 header-left">
-                <div class="logo"> <a href="index.html"><img src="images/logo2.jpg" alt="#" class=""></a> </div>
+                <div class="logo"> <a href="index.html"><img src="images/logo2.jpg" alt="U fashion" class=""></a> </div>
               </div>
               <div class="col-md-6 search_block mt-35">
                 <div class="search pt-5">
@@ -212,7 +254,7 @@
           </div>
         </div>
       </div>
-      <!-- Header End -->   
+      <!-- Header End -->    
       <!-- Main menu Start -->
       <div id="main-menu">
         <div class="container">
@@ -225,15 +267,15 @@
                 <li><a href="index.html">HOME</a></li>
                 <li><a href="grid-view.html">WOMEN</a></li>
                 <li><a href="grid-view.html">MEN</a><span class="new">new</span></li>            
-                <li><a href="contact-us.html">CONTACT US</a></li>
-                <li><a href="about-us.html">ABOUT US</a></li>
+                <li><a href="contact.html">CONTACT US</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
               </ul>
             </div>
           </nav>
         </div>
       </div>
   <!-- Featured Products block Start  -->
-  <div class="container border border-primary">
+  <div class="container">
      <nav class="navbar2 navbar-default pl-5">
        <div class="navbar-header">
           <button aria-controls= "items" data-target="#items" data-toggle="collapse" class="navbar-toggle collapsed" type="button"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
@@ -252,13 +294,13 @@
           <button class="btn btn-lg mt-10" id="wedding">Wedding</button>
         </div>
         <div class="col-sm-2">
-          <button class="btn btn-lg mt-10"  id="accessories">Accessories</button>
+          <button class="btn btn-lg mt-10" id="accessories">Accessories</button>
         </div>
         <div class="col-sm-1"></div>   
       </div>
      </nav>
 
-      <div class="row border border-primary mt-35">
+      <div class="row mt-2">
         <div class="dresses">
           <div class="row featured-productss">
               <div class="col-md-3 col-sm-6">
@@ -359,7 +401,8 @@
               </div>
           </div>
         </div>
-        <br><br>
+      </div>
+      <div class="row mt-2">
         <div class="blazers">
           <div class="row featured-productss">
               <div class="col-md-3 col-sm-6">
@@ -460,7 +503,8 @@
               </div>
           </div>
         </div>
-        <br><br>
+      </div>
+       <div class="row mt-2">
         <div class="wedding">
           <div class="row featured-productss">
               <div class="col-md-3 col-sm-6">
@@ -561,7 +605,8 @@
               </div>
           </div>
         </div>
-        <br><br>
+      </div>
+       <div class="row mt-2">
         <div class="accessories">
           <div class="row featured-productss">
               <div class="col-md-3 col-sm-6">
