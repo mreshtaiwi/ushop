@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>U Shop</title>
+<meta content="" name="description">
+<meta content="shihab" name="author">
+<link rel="icon" type="image/png" href="images/favicon.jpg">
+<link rel="apple-touch-icon" href="images/favicon.jpg">
+<link href="css/font-awesome.css" rel="stylesheet" type="text/css">
+<link href='https://fonts.googleapis.com/css?family=Poppins:300,500,600,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link href="css/owl.carousel.css" rel="stylesheet" type="text/css">
+<link href="Bootstrap/css/bootstrap.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/customstyle.css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body id="index">
+<div class="wrapar"> 
+  <!-- Header Start-->
+      <div class="header">
+        <div class="header-top">
+          <div class="container">
+            <div class="call pull-left">
+              <p>Call us: <span><a href="tel:00962788616108">00962788616108</a></span></p>
+            </div>
+            <div class="user-info pull-right">
+              <div class="user">
+                <ul>
+                  <li><a href="#" data-toggle="modal" data-target="#login">Login</a> 
+                    <!-- Modal -->
+                    <div class="modal fade" id="login" role="dialog">
+                      <div class="modal-dialog"> 
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <div class="panel-heading">
+                              <div class="panel-title pull-left">Login</div>
+                              <div class="pull-right"><a href="#" data-toggle="modal" data-target="#forget" data-dismiss="modal">Forgot password?</a>
+                                <button aria-hidden="true" data-dismiss="modal" class="close btn btn-xs " type="button"> <i class="fa fa-times"></i> </button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="modal-body">
+                            <form id="loginform" class="form-horizontal">
+                              <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                <input id="login-username" type="text" class="form-control" name="username" value="" placeholder="username or email">
+                              </div>
+                              <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                <input id="login-password" type="password" class="form-control" name="password" placeholder="password">
+                              </div>
+                              <div class="input-group">
+                                <div class="checkbox">
+                                  <label>
+                                    <input id="login-remember" type="checkbox" name="remember" value="1">
+                                    Remember me</label>
+                                </div>
+                              </div>
+                              <div class="form-group"> 
+                                <!-- Button -->
+                                <div class="col-sm-12 controls"><a id="btn-login" href="#" class="btn btn-primary btn-success">Login</a></div>
+                              </div>
+                            </form>
+                          </div>
+                          <div class="modal-footer">
+                            <div class="form-group">
+                              <div class="col-md-12 control">
+                                <div>Don't have an account! <a href="#" data-toggle="modal" data-target="#register" data-dismiss="modal">Sign Up Here</a></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="modal fade" id="forget" role="dialog">
+                              <div class="modal-dialog"> 
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <div class="panel-heading">
+                                      <div class="panel-title pull-left">Forget Password</div>
+                                      <div class="pull-right">
+                                        <button aria-hidden="true" data-dismiss="modal" class="close" type="button"><i class="fa fa-times"></i> </button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="modal-body">
+                                      <div class="panel panel-default">
+                                        <div class="panel-body">
+                                          <div class="text-center">
+                                            <h3><i class="fa fa-lock fa-4x"></i></h3>
+                                            <h2 class="text-center">Forgot Password?</h2>
+                                            <p>You can reset your password here.</p>
+                                            <div class="panel-body">
+                                              <form id="register-form" role="form" autocomplete="off" class="form" method="post">
+                                                <div class="form-group">
+                                                  <div class="input-group">
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
+                                                    <input id="emails" name="email" placeholder="email address" class="form-control"  type="email">
+                                                  </div>
+                                                </div>
+                                                <div class="form-group">
+                                                  <input name="recover-submit" class="btn btn-lg btn-primary btn-block shihabcolor" value="Reset Password" type="submit">
+                                                </div>
+                                                <input type="hidden" class="hide" name="token" id="token" value=""> 
+                                              </form>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                  </div>
+                                </div>
+                              </div>
+                    </div>
+                  </li>
+                  <li><a href="#" data-toggle="modal" data-target="#register">Register</a>
+                    <div class="modal fade" id="register" role="dialog">
+                      <div class="modal-dialog"> 
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <div class="panel-heading">
+                              <div class="panel-title pull-left">Register</div>
+                              <div class="pull-right">
+                                <button aria-hidden="true" data-dismiss="modal" class="close" type="button"><i class="fa fa-times"></i> </button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="modal-body">
+                            <div class="control-group"> 
+                              <!-- Username -->
+                              <label class="control-label"  for="username">Username</label>
+                              <div class="controls">
+                                <input type="text" id="username" name="username" placeholder="" class="input-xlarge">
+                                <p class="help-block">Username can contain any letters or numbers, without spaces</p>
+                              </div>
+                            </div>
+                            <div class="control-group"> 
+                              <!-- E-mail -->
+                              <label class="control-label" for="email">E-mail</label>
+                              <div class="controls">
+                                <input type="text" id="email" name="email" placeholder="" class="input-xlarge">
+                                <p class="help-block">Please provide your E-mail</p>
+                              </div>
+                            </div>
+                            <div class="control-group"> 
+                              <!-- Password-->
+                              <label class="control-label" for="password">Password</label>
+                              <div class="controls">
+                                <input type="password" id="password" name="password" placeholder="" class="input-xlarge">
+                                <p class="help-block">Password should be at least 4 characters</p>
+                              </div>
+                            </div>
+                            <div class="control-group"> 
+                              <!-- Password -->
+                              <label class="control-label"  for="password_confirm">Password (Confirm)</label>
+                              <div class="controls">
+                                <input type="password" id="password_confirm" name="password_confirm" placeholder="" class="input-xlarge">
+                                <p class="help-block">Please confirm password</p>
+                              </div>
+                            </div>
+                            <div class="control-group"> 
+                              <!-- Button -->
+                              <div class="controls">
+                                <button class="btn btn-success">Register</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header-mid">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-2 header-left">
+                <div class="logo"> <a href="index.html"><img src="images/logo2.jpg" alt="U fashion" class=""></a> </div>
+              </div>
+              <div class="col-md-6 search_block mt-35">
+                <div class="search pt-5">
+                  <form action="grid-view.html">
+                    <div class="search_cat">
+                      <select class="search-category" name="search-category">
+                        <option class="computer" selected>All Categories</option>
+                        <option class="computer">Men</option>
+                        <option class="computer">Women</option>
+                        <option class="computer">Accessories</option>
+                        <option class="computer">Electronics</option>
+                        <option class="computer">Personal Care</option>
+                      </select>
+                    </div>
+                    <input type="text" placeholder="Search...">
+                    <button type="submit" class="btn submit"> <span class="fa fa-search"></span></button>
+                  </form>
+                </div>
+              </div>
+              <div class="col-md-3 header-right mt-35">
+                <div class="cart">
+                  <div class="cart-icon dropdown"></div>
+                  <a aria-expanded="false" aria-haspopup="true" role="button" data-toggle="dropdown" class="dropdown-toggle" href="cart.html">My Cart( 2 )<span> $40.60</span></a>
+                  <ul class="dropdown-menu pull-right cart-dropdown-menu shihabcolor">
+                    <li>
+                      <table class="table table-striped">
+                        <tbody>
+                          <tr>
+                            <td class="text-center"><a href="product.html"><img class="img-thumbnail" src="images/product/black-skirt.jpg" alt="img"></a></td>
+                            <td class="text-left"><a href="#">Black Skirt</a></td>
+                            <td class="text-right quality">X1</td>
+                            <td class="text-right price-new">$25.00</td>
+                            <td class="text-center"><button type="button" title="Remove" class="btn btn-xs remove"><i class="fa fa-times"></i></button></td>
+                          </tr>
+                          <tr>
+                            <td class="text-center"><a href="product.html"><img class="img-thumbnail" src="images/product/yellow-t-shirt.jpg" alt="img"></a></td>
+                            <td class="text-left"><a href="#">Yellow T-shirt</a></td>
+                            <td class="text-right quality">X1</td>
+                            <td class="text-right price-new">$10.00</td>
+                            <td class="text-center"><button type="button" title="Remove" class="btn btn-xs remove"><i class="fa fa-times"></i></button></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </li>
+                    <li>
+                      <div class="minitotal">
+                        <table class="table pricetotal">
+                          <tbody>
+                            <tr>
+                              <td class="text-right"><strong>Sub-Total</strong></td>
+                              <td class="text-right price-new">$35.00</td>
+                            </tr>
+                            <tr>
+                              <td class="text-right"><strong>Tax (16%)</strong></td>
+                              <td class="text-right price-new">$5.6</td>
+                            </tr>
+                            <tr>
+                              <td class="text-right"><strong>Total</strong></td>
+                              <td class="text-right price-new">$40.60</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <div class="controls"> <a class="btn btn-primary pull-left" href="cart.html" id="view-cart"><i class="fa fa-shopping-cart"></i> View Cart </a> <a class="btn btn-primary pull-right" href="checkout-step1.html" id="checkout"><i class="fa fa-share"></i> Checkout</a> </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Header End -->    
+      <!-- Main menu Start -->
+      <div id="main-menu">
+        <div class="container">
+          <nav class="navbar navbar-default">
+            <div class="navbar-header">
+              <button aria-controls= "navbar" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+              <a href="index.html" class="navbar-brand shihabcolor">U Shop</a> </div>
+            <div class="navbar-collapse collapse text-left" id="navbar">
+              <ul class="nav navbar-nav">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="grid-view.html">WOMEN</a></li>
+                <li><a href="grid-view.html">MEN</a><span class="new">new</span></li>            
+                <li><a href="contact.html">CONTACT US</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+  <!-- Featured Products block Start  -->
+  <div class="container">
+     <nav class="navbar2 navbar-default pl-5">
+       <div class="navbar-header">
+          <button aria-controls= "items" data-target="#items" data-toggle="collapse" class="navbar-toggle collapsed" type="button"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        </div>
+      <div class="row navbar-collapse collapse" id="items">  
+        <div class="col-sm-3">
+          <button class="btn btn-lg mt-10" id="all">All products</button>
+        </div>
+        <div class="col-sm-2">
+          <button class="btn btn-lg mt-10" id="dresses">Dresses</button>
+        </div>
+        <div class="col-sm-2">
+          <button class="btn btn-lg mt-10" id="blazers">Blazers</button>
+        </div>
+        <div class="col-sm-2">
+          <button class="btn btn-lg mt-10" id="wedding">Wedding</button>
+        </div>
+        <div class="col-sm-2">
+          <button class="btn btn-lg mt-10" id="accessories">Accessories</button>
+        </div>
+        <div class="col-sm-1"></div>   
+      </div>
+     </nav>
+
+      <div class="row mt-2">
+        <div class="dresses">
+          <div class="row featured-productss">
+              <div class="col-md-3 col-sm-6">
+                  <div class="product-grid dres1">
+                        <div class="product-image">
+                            <a href="product-detail-view.html">
+                            <img class="pic-1" src="images/product/dress5.jpg">
+                            <img class="pic-2" src="images/product/dress5a.jpg">
+                            </a>
+                            <ul class="social">
+                            <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                            <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                            <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">Sale</span>
+                            <span class="product-discount-label">50%</span>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">SURPRISE ME MOCHA MULTI ZEBRA</a></h3>
+                            <div class="price">$5.00
+                            <span>$10.00</span>
+                            </div>
+                            <a class="add-to-cart" href="cart.html">+ Add To Cart</a>
+                        </div>
+                  </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                  <div class="product-grid dres1">
+                      <div class="product-image">
+                      <a href="product-detail-view.html">
+                      <img class="pic-1" src="images/product/dress7.jpg">
+                      <img class="pic-2" src="images/product/dress7a.jpg">
+                      </a>
+                      <ul class="social">
+                      <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                      <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                      <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                      </ul>
+                      <span class="product-new-label">Sale</span>
+                      <span class="product-discount-label">50%</span>
+                      </div>
+                      <div class="product-content">
+                      <h3 class="title"><a href="#">SPEECHLESS LAVENDER SATIN SLIT</a></h3>
+                      <div class="price">$5.00
+                      <span>$10.00</span>
+                      </div>
+                      <a class="add-to-cart" href="cart.html">+ Add To Cart</a>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                  <div class="product-grid dres1">
+                      <div class="product-image">
+                      <a href="product-detail-view.html">
+                      <img class="pic-1" src="images/product/dress8.jpg">
+                      <img class="pic-2" src="images/product/dress8a.jpg">
+                      </a>
+                      <ul class="social">
+                      <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                      <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                      <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                      </ul>
+                      <span class="product-new-label">Sale</span>
+                      <span class="product-discount-label">50%</span>
+                      </div>
+                      <div class="product-content">
+                      <h3 class="title"><a href="#">SHAPE SHIFTER LAVENDER & WHITE</a></h3>
+                      <div class="price">$5.00
+                      <span>$10.00</span>
+                      </div>
+                      <a class="add-to-cart" href="cart.html">+ Add To Cart</a>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                  <div class="product-grid dres1">
+                      <div class="product-image">
+                      <a href="product-detail-view.html">
+                      <img class="pic-1" src="images/product/dress6.jpg">
+                      <img class="pic-2" src="images/product/dress6a.jpg">
+                      </a>
+                      <ul class="social">
+                      <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                      <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                      <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                      </ul>
+                      <span class="product-new-label">Sale</span>
+                      <span class="product-discount-label">50%</span>
+                      </div>
+                      <div class="product-content">
+                      <h3 class="title"><a href="#">SHAPE SHIFTER LAVENDER & WHITE</a></h3>
+                      <div class="price">$5.00
+                      <span>$10.00</span>
+                      </div>
+                      <a class="add-to-cart" href="cart.html">+ Add To Cart</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="blazers">
+          <div class="row featured-productss">
+              <div class="col-md-3 col-sm-6">
+                  <div class="product-grid blaz1">
+                        <div class="product-image">
+                            <a href="product-detail-view.html">
+                            <img class="pic-1" src="images/product/jack7.jpg">
+                            <img class="pic-2" src="images/product/jack7a.jpg">
+                            </a>
+                            <ul class="social">
+                            <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                            <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                            <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">Sale</span>
+                            <span class="product-discount-label">50%</span>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">TAKE ME TO THE BALL BLUSH MAXI</a></h3>
+                            <div class="price">$5.00
+                            <span>$10.00</span>
+                            </div>
+                            <a class="add-to-cart" href="cart.html">+ Add To Cart</a>
+                        </div>
+                  </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                  <div class="product-grid blaz1">
+                      <div class="product-image">
+                      <a href="product-detail-view.html">
+                      <img class="pic-1" src="images/product/jack6a.jpg">
+                      <img class="pic-2" src="images/product/jack6.jpg">
+                      </a>
+                      <ul class="social">
+                      <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                      <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                      <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                      </ul>
+                      <span class="product-new-label">Sale</span>
+                      <span class="product-discount-label">50%</span>
+                      </div>
+                      <div class="product-content">
+                      <h3 class="title"><a href="#">SHIFTER SHAPE SHIFTER LAVENDER</a></h3>
+                      <div class="price">$5.00
+                      <span>$10.00</span>
+                      </div>
+                      <a class="add-to-cart" href="cart.html">+ Add To Cart</a>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                  <div class="product-grid blaz1">
+                      <div class="product-image">
+                      <a href="product-detail-view.html">
+                      <img class="pic-1" src="images/product/jack1.jpg">
+                      <img class="pic-2" src="images/product/jack12.jpg">
+                      </a>
+                      <ul class="social">
+                      <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                      <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                      <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                      </ul>
+                      <span class="product-new-label">Sale</span>
+                      <span class="product-discount-label">50%</span>
+                      </div>
+                      <div class="product-content">
+                      <h3 class="title"><a href="#">SHAPE SHIFTER LAVENDER & WHITE</a></h3>
+                      <div class="price">$5.00
+                      <span>$10.00</span>
+                      </div>
+                      <a class="add-to-cart" href="cart.html">+ Add To Cart</a>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                  <div class="product-grid blaz1">
+                      <div class="product-image">
+                      <a href="product-detail-view.html">
+                      <img class="pic-1" src="images/product/jack5.jpg">
+                      <img class="pic-2" src="images/product/jack5b.jpg">
+                      </a>
+                      <ul class="social">
+                      <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                      <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                      <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                      </ul>
+                      <span class="product-new-label">Sale</span>
+                      <span class="product-discount-label">50%</span>
+                      </div>
+                      <div class="product-content">
+                      <h3 class="title"><a href="#">FREE PEOPLE LADYLIKE BLACK</a></h3>
+                      <div class="price">$5.00
+                      <span>$10.00</span>
+                      </div>
+                      <a class="add-to-cart" href="cart.html">+ Add To Cart</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+       <div class="row mt-2">
+        <div class="wedding">
+          <div class="row featured-productss">
+              <div class="col-md-3 col-sm-6">
+                  <div class="product-grid wed1">
+                        <div class="product-image">
+                            <a href="product-detail-view.html">
+                            <img class="pic-1" src="images/product/wed1a.jpg">
+                            <img class="pic-2" src="images/product/wed1b.jpg">
+                            </a>
+                            <ul class="social">
+                            <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                            <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                            <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">Sale</span>
+                            <span class="product-discount-label">50%</span>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">LETTING LOOSE FOR TONIGHT</a></h3>
+                            <div class="price">$5.00
+                            <span>$10.00</span>
+                            </div>
+                            <a class="add-to-cart" href="cart.html">+ Add To Cart</a>
+                        </div>
+                  </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                  <div class="product-grid wed1">
+                      <div class="product-image">
+                      <a href="product-detail-view.html">
+                      <img class="pic-1" src="images/product/wed2a.jpg">
+                      <img class="pic-2" src="images/product/wed2b.jpg">
+                      </a>
+                      <ul class="social">
+                      <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                      <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                      <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                      </ul>
+                      <span class="product-new-label">Sale</span>
+                      <span class="product-discount-label">50%</span>
+                      </div>
+                      <div class="product-content">
+                      <h3 class="title"><a href="#">BE MY PLUS ONE CHARCOAL MAXI</a></h3>
+                      <div class="price">$5.00
+                      <span>$10.00</span>
+                      </div>
+                      <a class="add-to-cart" href="cart.html">+ Add To Cart</a>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                  <div class="product-grid wed1">
+                      <div class="product-image">
+                      <a href="product-detail-view.html">
+                      <img class="pic-1" src="images/product/wed3a.jpg">
+                      <img class="pic-2" src="images/product/wed3b.jpg">
+                      </a>
+                      <ul class="social">
+                      <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                      <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                      <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                      </ul>
+                      <span class="product-new-label">Sale</span>
+                      <span class="product-discount-label">50%</span>
+                      </div>
+                      <div class="product-content">
+                      <h3 class="title"><a href="#">JUST FOR TONIGHT MARIGOLD SATIN</a></h3>
+                      <div class="price">$5.00
+                      <span>$10.00</span>
+                      </div>
+                      <a class="add-to-cart" href="cart.html">+ Add To Cart</a>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                  <div class="product-grid wed1">
+                      <div class="product-image">
+                      <a href="product-detail-view.html">
+                      <img class="pic-1" src="images/product/wed4a.jpg">
+                      <img class="pic-2" src="images/product/wed4b.jpg">
+                      </a>
+                      <ul class="social">
+                      <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                      <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                      <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                      </ul>
+                      <span class="product-new-label">Sale</span>
+                      <span class="product-discount-label">50%</span>
+                      </div>
+                      <div class="product-content">
+                      <h3 class="title"><a href="#">LUNA BLACK 3-TIER RUFFLE LACE</a></h3>
+                      <div class="price">$5.00
+                      <span>$10.00</span>
+                      </div>
+                      <a class="add-to-cart" href="cart.html">+ Add To Cart</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+       <div class="row mt-2">
+        <div class="accessories">
+          <div class="row featured-productss">
+              <div class="col-md-3 col-sm-6">
+                  <div class="product-grid acc1">
+                        <div class="product-image">
+                            <a href="product-detail-view.html">
+                            <img class="pic-1" src="images/product/acc5a.jpg">
+                            <img class="pic-2" src="images/product/acc5b.jpg">
+                            </a>
+                            <ul class="social">
+                            <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                            <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                            <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">Sale</span>
+                            <span class="product-discount-label">50%</span>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">TAKE ME TO THE BALL BLUSH MAXI</a></h3>
+                            <div class="price">$5.00
+                            <span>$10.00</span>
+                            </div>
+                            <a class="add-to-cart" href="cart.html">+ Add To Cart</a>
+                        </div>
+                  </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                  <div class="product-grid acc1">
+                      <div class="product-image">
+                      <a href="product-detail-view.html">
+                      <img class="pic-1" src="images/product/acc1a.jpg">
+                      <img class="pic-2" src="images/product/acc1b.jpg">
+                      </a>
+                      <ul class="social">
+                      <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                      <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                      <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                      </ul>
+                      <span class="product-new-label">Sale</span>
+                      <span class="product-discount-label">50%</span>
+                      </div>
+                      <div class="product-content">
+                      <h3 class="title"><a href="#">NICOLE TAN LEOPARD HAT</a></h3>
+                      <div class="price">$5.00
+                      <span>$10.00</span>
+                      </div>
+                      <a class="add-to-cart" href="cart.html">+ Add To Cart</a>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                  <div class="product-grid acc1">
+                      <div class="product-image">
+                      <a href="product-detail-view.html">
+                      <img class="pic-1" src="images/product/acc2.jpg">
+                      <img class="pic-2" src="images/product/acc2a.jpg">
+                      </a>
+                      <ul class="social">
+                      <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                      <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                      <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                      </ul>
+                      <span class="product-new-label">Sale</span>
+                      <span class="product-discount-label">50%</span>
+                      </div>
+                      <div class="product-content">
+                      <h3 class="title"><a href="#">LINDA WOOL PANAMA HAT</a></h3>
+                      <div class="price">$5.00
+                      <span>$10.00</span>
+                      </div>
+                      <a class="add-to-cart" href="cart.html">+ Add To Cart</a>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                  <div class="product-grid acc1">
+                      <div class="product-image">
+                      <a href="product-detail-view.html">
+                      <img class="pic-1" src="images/product/acc3.jpg">
+                      <img class="pic-2" src="images/product/acc3a.jpg">
+                      </a>
+                      <ul class="social">
+                      <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                      <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                      <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                      </ul>
+                      <span class="product-new-label">Sale</span>
+                      <span class="product-discount-label">50%</span>
+                      </div>
+                      <div class="product-content">
+                      <h3 class="title"><a href="#">JULIA BLACK RHINESTONE BAG</a></h3>
+                      <div class="price">$5.00
+                      <span>$10.00</span>
+                      </div>
+                      <a class="add-to-cart" href="cart.html">+ Add To Cart</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>      
+  </div>
+  <!-- Featured Products block End  --> 
+  <!-- Footer block Start  -->
+ <footer id="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class= "newslatter">
+                <form>
+                  <h2 class="tf">Be The First To Hear Our Exciting News</h2>
+                  <div class="input-group">
+                    <input class=" form-control" type="text" placeholder="Email Here...">
+                    <button type="submit" value="Sign up" class="btn btn-large btn-primary">Sign up</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3">
+              <div class="about">
+                <div class="footer-logo"><a href="index.html"><img src="images/logo2.jpg" alt="#" class=""></a></div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="information">
+                <h4>Customer Service</h4>
+                <ul class="toggle-footer">
+                  <li><a href="#">Returns</a></li>
+                  <li><a href="#">Delivery Options</a></li>
+                  <li><a href="#">Brand Directory</a></li>
+                  <li><a href="#">Buying Guides</a></li>
+                  <li><a href="#">My Account</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="contact">
+                <h4>Contact Us</h4>
+                <ul class="toggle-footer">
+                  <li> <i class="fa fa-map-marker"></i>
+                    <div class="address-info">Warehouse & Offices macca street,Amman, Jordan</div>
+                  </li>
+                  <li> <i class="fa fa-mobile"></i>
+                    <div class="call-info">+962788616108<br>
+                    </div>
+                  </li>
+                  <li> <i class="fa fa-envelope"> </i>
+                    <div class="email-info"><a href="#"> support@ushop.com</a></div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="social-link">
+                  <ul>
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="footer-link">
+                  <ul>
+                    <li><a href="#">Specials</a></li>
+                    <li><a href="#">Affiliates</a></li>
+                    <li><a href="#">Gift Vouchers</a></li>
+                    <li><a href="#">Brands</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Site Map</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="copy-right">
+                  <p> All Rights Reserved. Copyright 2019 Powered by <a href="index.html">U shop</a>.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-offer">
+            <h2>Deals of the Day: Unbox Latest Offers & Deals Every Single Day at Store.</h2>
+          </div>
+        </div>
+      </footer>
+  <!-- Footer block End  --> 
+</div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script src="js/jQuery.js"></script> 
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script src="Bootstrap/js/bootstrap.js"></script> 
+<script src="js/owl.carousel.min.js"></script> 
+<script src="js/globle.js"></script>
+</body>
+</html>
